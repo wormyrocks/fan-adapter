@@ -18,10 +18,11 @@ https://github.com/wagiminator/CH32X035-USB-PD-Adapter
 
 Most firmware development could be done using the inbuilt USB bootloader or the [UCPD adapter](https://github.com/wagiminator/CH32X035-USB-PD-Adapter) sample code from Stefan Wagner. More simple example firmwares for CH32X035 live here: [CH32V003fun examples](https://github.com/cnlohr/ch32v003fun/tree/master/examples_x035)
 
-There are LEDs to indicate the fan speed and two touch buttons to make it go faster and slower. Since there's a tachometer, you could do some pretty delightful UI stuff by making the line of LEDs strobe at the exact speed that the rotors are turning, which would make this into a fun desk toy.
+There are LEDs to indicate the fan speed and two touch buttons to make it go faster and slower. Since there's a tach pin, you could do some pretty delightful UI stuff by making the line of LEDs strobe at the exact speed that the rotors are turning, which would make this into a fun desk toy.
 
 I don't do a lot of work with motors and maybe would like someone to take a second look at the fan drive circuit. I followed [this](https://noctua.at/pub/media/wysiwyg/Noctua_PWM_specifications_white_paper.pdf) white paper. Do I need a flyback diode or something? More decoupling capacitors?
 
-Also, it's pretty hard to find the through-hole fan connector on LCSC, so the part link is to Aliexpress. Con: there's one manual assembly step. Pro: we have sprung literally none of the typical JLCPCB added-cost traps. 
+I remember spending a comically long time trying to find an in-stock LCSC alt for the 4-pin 2.54mm fan connector (Molex 470533000), it looks like it might be in "Molex actually defends that patent" territory. Oh well. Buy them on Amazon and solder them yourself, or knock yourself out on Aliexpress.
+On the plus side, this means there are no through-hole parts, which will knock a day and a couple dollars off the final JLCPCB bill.
 
 Evan Kahn 2025
